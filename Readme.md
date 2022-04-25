@@ -51,8 +51,8 @@ use DIM\DependencyInjectionContainer;
 $container = DependencyInjectionContainer::instance();
 
 //First way
-$class = $container->call("UserController@addToCart");
+$container->call("UserController@addToCart");
 
 //Second way
-$class = $container->call(["UserController", "test"], ["number" => 4]);
+$container->call(["UserController", "test"], ["number" => 4]);
 ```
