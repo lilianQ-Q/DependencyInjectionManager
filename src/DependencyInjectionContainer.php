@@ -68,7 +68,7 @@ class DependencyInjectionContainer
 	private function resolveCallback(string $callable) : void
 	{
 		$tmp = explode($this->separator, $callable);
-		$this->callbackClass = $this->namespace . $tmp[0];
+		$this->callbackClass = $tmp[0];
 		$this->callbackMethod = isset($tmp[1]) ? $tmp[1] : '__invoke';
 	}
 
